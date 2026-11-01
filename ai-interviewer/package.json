@@ -1,0 +1,14 @@
+{
+  "name": "ai-interviewer",
+  "version": "1.0.0",
+  "description": "AI-powered interview practice application",
+  "scripts": {
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd server && npm install && cd ../client && npm install && npm run build",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

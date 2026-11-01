@@ -1,0 +1,36 @@
+{
+  "name": "ai-interviewer-server",
+  "version": "1.0.0",
+  "description": "API for AI Interviewer: Express, Postgres and Groq",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index",
+    "smoke": "node scripts/smoke-test.js",
+    "test-mail": "node scripts/test-mail.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "google-auth-library": "^10.9.0",
+    "groq-sdk": "^1.6.0",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.2.0",
+    "nodemailer": "^10.1.0",
+    "path": "^0.12.7",
+    "pg": "^8.23.1",
+    "socket.io": "^4.8.3"
+  }
+}

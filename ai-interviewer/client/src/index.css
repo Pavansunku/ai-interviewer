@@ -1,0 +1,109 @@
+/* ── Minimalist, Sleek & Professional Design System ────────────────────────
+   Flat surfaces, hairline borders, refined typography, generous whitespace.
+   Zero gradients, zero heavy shadows, zero decorative noise.
+────────────────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* ── Neutral Palette ── */
+  --color-bg: #09090b;
+  --color-bg-subtle: #0f0f12;
+  --color-surface: #141417;
+  --color-surface-hover: #1a1a1e;
+  --color-border: #27272a;
+  --color-border-subtle: rgba(255, 255, 255, 0.07);
+  --color-border-hover: #3f3f46;
+  
+  /* ── Typography & Text ── */
+  --color-text: #f4f4f5;
+  --color-text-muted: #a1a1aa;
+  --color-text-dim: #71717a;
+  
+  /* ── Precise Functional Accents ── */
+  --color-accent: #ffffff;
+  --color-success: #22c55e;
+  --color-warning: #eab308;
+  --color-error: #ef4444;
+
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar { 
+    width: 5px; 
+  }
+  ::-webkit-scrollbar-track { 
+    background: var(--color-bg); 
+  }
+  ::-webkit-scrollbar-thumb { 
+    background: #27272a; 
+    border-radius: 2px; 
+  }
+
+  ::selection {
+    background-color: #27272a;
+    color: #ffffff;
+  }
+}
+
+.font-display { 
+  font-family: var(--font-sans); 
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* ── Typography Utilities ── */
+.text-headline {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* Replaces all previous heavy text gradients with crisp, flat high-contrast white */
+.gradient-text {
+  color: #ffffff;
+}
+
+/* ── Flat Structural Cards ── */
+.flat-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+/* ── Voice waveform: clean, flat, minimal bars ── */
+@keyframes waveform-quiet {
+  0%, 100% { height: 4px; }
+  50% { height: 22px; }
+}
+
+.waveform-bar-minimal {
+  animation: waveform-quiet var(--bar-duration, 600ms) ease-in-out infinite;
+  min-height: 4px;
+  max-height: 24px;
+}
